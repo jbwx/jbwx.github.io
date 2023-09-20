@@ -1,56 +1,182 @@
-<title>Jacob Westra</title>
-<style>
-    .titleText{
-        font-size:3vw;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Westra</title>
+    <style>
+        /* Inline CSS styles */
+        body {
+            font-family: 'Tahoma';
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: rgb(180, 180, 180);
+        }
 
-    .mainText{
-        position:absolute;
-        text-align: justify;
-        max-width: 45vw;
-        left: 27.5vw;
-        font-family: monospace;
-    }
+        nav {
+            background-color: #333;
+            text-align: left;
+            padding-right: 0vw;
+        }
 
-    .meImg{
-        width: 45vw;
-    }
+        .bottomNav {
+            text-align: left;
+            padding: 0.5vw;
+        }
 
-    .link{
-        color:red;
-        text-decoration: none;
-        text-align: right;
-        float: right;
-    }
-</style>
+        .bottomText {
+            margin-left:25vw;
+            color:darkgrey;
+        }
 
-<div class="mainText">
-    <img class="meImg" src="me.jpg">
-    <br>
-    <div class="titleText">
-         Hey!
+        nav a {
+            text-decoration: none;
+            color: rgb(197, 197, 197);
+            padding: 0.7vw 0.7vw;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #0074d9;
+            color: #ffffff;
+        }
+
+        .container {
+            margin-left: 25vw;
+            margin-right: 25vw;
+            padding: 0.5vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            margin-top: 1.5vw;
+            margin-bottom: 1.5vw;
+            background-color: #222;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 12pt;
+            color: #0074d9;
+        }
+
+        p {
+            font-size: 12pt;
+        }
+
+        span a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12pt;
+            color: #0074d9;
+        }
+
+        .container a {
+            text-decoration: none;
+            font-size: 12pt;
+            color: #0074d9;
+        }
+
+        .JW {
+            margin-left:26vw;
+        }
+
+        img {
+            width:20%;
+        }
+
+        /* Change appearance for mobile */
+        @media only screen and (max-width: 1200px) {
+                .bottomText {
+                margin-left:3vw;
+                color:darkgrey;
+            }
+
+                .container {
+                margin-left: 3vw;
+                margin-right: 3vw;
+                padding: 0.5vw;
+                padding-left: 3vw;
+                padding-right: 3vw;
+                margin-top: 3vw;
+                margin-bottom: 3vw;
+            }
+
+                .JW {
+                margin-left:3vw;
+            }
+
+                img {
+                width:50%;
+                margin-left:25%;
+                margin-top: 3vw;
+            }
+
+                nav a {
+                padding-top:3vw;
+                padding-bottom: 3vw;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://jacobwestra.com" class="JW">Jacob Westra</a>
+        <a href="https://calvinchimes.org/staff_name/jacob-westra/">Articles</a>
+        <a href="resume">Resume</a>
+        <a href="contact">Contact</a>
+    </nav>
+    <div class="container" id="about">
+        <img src=me.png>
+        <h2>About Me</h2>
+        <p>
+            Hey! I’m Jacob Westra, a senior studying computer science at <a href="https://Calvin.edu">Calvin University</a> in Grand Rapids, Michigan.
+        </p>
+        <p>
+            I have a passion for ethics in computer science, and love giving an easy-to-understand perspective for all things STEM, which is why I’m a reporter for Calvin’s student newspaper, <a href="https://calvinchimes.org">the Chimes</a>, covering <a href="https://calvinchimes.org/staff_name/jacob-westra/">science & technology</a>.
+        </p>
+        <p>
+            I’m also currently working on a project to monitor well-water usage in remote villages in Ecuador, through <a href="https://www.lifegivingwaterinternational.org/">Life Giving Water International</a> and Calvin’s <a href="https://calvin.edu/centers-institutes/clean-water-institute/">Clean Water Institute</a>.
+        </p>
+        <p>
+            Additionally, I was an overnight camp counselor at <a href="https://camproger.org">Camp Roger</a> this past summer. It felt great giving back to the community I love, and fostering genuine connections between kids and nature.
+        
+        </p><p> 
+            I’m also currently looking for a job after graduation! If you’re a local company with a care for sustainability and helping the local community, I’d love to get in contact! My <a href="resume">resume</a> and <a href="contact">contact info</a> may be of help.
+        </p>
     </div>
-    <br>
-    Hello! I am Jacob Westra, a junior studying computer 
-    science at Calvin University in Grand Rapids, Michigan. 
-    I enjoy the natural beauty of Michigan, especially during 
-    the summer and fall. Northern Michigan is one of my 
-    favorite places. On this page, you can find links to some 
-    personal projects I've worked on, and/or plans for upcoming projects.
-    <p>
-    <!-- One area that interests me is randomness in computing. I 
-    find it fascinating how random numbers are used across
-    all areas of computing, especially in cryptography. You may
-    see this reflected in personal projects of mine. -->
 
-        <a class="link" href="https://jbwx.github.io/TerrainGenerator/" target="_self">Terrain Generator</a> <br>
-        <a class="link" href="https://jbwx.github.io/T3/" target="_self">T3.cmd</a> <br>
-        <a class="link" href="https://jbwx.github.io/CaMEO/index.html" target="_self">CaMEO</a> <br>
-        <a class="link" href="https://jbwx.github.io/MicroHash" target="_self">Hash Function</a> <br>
-        <a class="link" href="https://jbwx.github.io/CoffeeMonitor/" target="_self">CoffeeMonitor</a> <br>
-        <a class="link" href="https://jbwx.github.io/about/404.html" target="_self">Open-World Game</a> <br>
-        <a class="link" href="mailto:jacobwestra0@gmail.com" target="_self">Resume</a>
-       
-    </p>
+    <div class="container">
+        <h2>Work I've done</h2>
+        <p>
+            Along with my current experiences, I've done some other interesting things in the past.
+        </p> <p>
+            My sophomore and junior years at Calvin, I helped lead the student organization <a href="https://abs.calvin.edu">Abstraction</a>. Abstraction is Calvin's computer science club with, with around 50 members. I helped organize and lead events, design posters, and manage costs.
+        </p> <p>
+            I've also volunteered for several organizations, such as <a href="https://asphome.org/">Appalachia Service Project</a>, <a href="https://compheart.org/">Compassionate Heart Ministries</a>, and <a href="https://www.feedwm.org/">Feeding America West Michigan</a>.
+        </p> <p>
+            I've also worked as a student intern at <a href="https://yanfeng.com">Yanfeng Automotive Interiors</a>. It was my first "office job", and I dealt with pricing for Chrysler-Fiat/Stellantis. I had worked on the factory floor in summers prior, and it was interesting seeing my work from another perspective.
+        </div>
 
-   </div>
+        <div class="container">
+            <h2>Projects</h2>
+            <p>
+                As mentioned above, I'm currently working on an app to monitor water usage with LGWI's projects in Ecuador. This app will be available in both English and Spanish, and display monthly costs for each household as well. The planned delivery date is in April of 2024.
+            </p> <p>
+                I've made several programs with small footprints, aimed at being run on embedded devices. <a href="T3">T3</a> is the smallest game of tic-tac-toe I know of, and <a href="MicroHash">MicroHash</a> aims to bring a secure hash algorithm down to an embedded level. I've also made an <a href="CoffeeMonitor">IoT Coffee Maker Monitor</a> that runs on a Raspberry Pi.
+            </p> <p>
+                I have (a lot) of projects that are still in the works, chief among them being an open-world, entirely client-side multiplayer strategy game. The terrain generation algorithm is mostly done, and can be found <a href="https://jacobwestra.com/TerrainGenerator/">here</a>. I plan to write the entire game in vanilla Javascript, for performance reasons.
+            </p>
+              </div>
+    
+    <div class="container">
+        <h2>Contact</h2>
+        <p>You can reach me at jbw23@calvin.edu. My more sensitive contact information can be found on my <a href="contact">contact</a> page. Use the same password for my resume.
+
+        </p>
+    </div>
+    <span class="bottomNav">
+        <span class="bottomText">Site built and maintained by Jacob Westra • <a href="https://github.com/jbwx">Github</a> • <a href="https://linkedin.com/in/jbwx"> LinkedIn</a> </span>
+    </span>
+</body>
+</html>

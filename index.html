@@ -1,239 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jacob Westra</title>
-        <style>
-            /* Inline CSS styles */
-            body {
-                font-family: 'Tahoma';
-                margin: 0;
-                padding: 0;
-                background-color: #111;
-                color: rgb(180, 180, 180);
-            }
-    
-            nav {
-                background-color: #333;
-                text-align: left;
-                padding-right: 0vw;
-            }
-    
-            .bottomNav {
-                text-align: left;
-                padding: 0.5vw;
-            }
-    
-            .bottomText {
-                margin-left:25vw;
-                color:darkgrey;
-            }
-    
-            nav a {
-                text-decoration: none;
-                color: rgb(197, 197, 197);
-                padding: 0.7vw 0.7vw;
-                display: inline-block;
-            }
-    
-            nav a:hover {
-                background-color: #0074d9;
-                color: #ffffff;
-            }
-    
-            .container {
-                margin-left: 25vw;
-                margin-right: 25vw;
-                padding: 0.5vw;
-                padding-left: 1vw;
-                padding-right: 1vw;
-                margin-top: 1.5vw;
-                margin-bottom: 1.5vw;
-                background-color: #222;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            }
-    
-            h2 {
-                font-size: 12pt;
-                color: #0074d9;
-            }
-    
-            p {
-                font-size: 12pt;
-            }
-    
-            span a {
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 12pt;
-                color: #0074d9;
-            }
-    
-            .container a {
-                text-decoration: none;
-                font-size: 12pt;
-                color: #0074d9;
-            }
-    
-            .JW {
-                margin-left:26vw;
-            }
-    
-            .me-img {
-                width:20%;
-            }
-    
-            img {
-                width: 100%;
-            }
-    
-            .expandedImage {
-                position: fixed;
-                width: 90vw;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-            
-    
-            /* Change appearance for mobile */
-            @media only screen and (max-width: 1200px) {
-                    .bottomText {
-                    margin-left:3vw;
-                    color:darkgrey;
-                }
-    
-                    .container {
-                    margin-left: 3vw;
-                    margin-right: 3vw;
-                    padding: 0.5vw;
-                    padding-left: 3vw;
-                    padding-right: 3vw;
-                    margin-top: 3vw;
-                    margin-bottom: 3vw;
-                }
-    
-                    .JW {
-                    margin-left:3vw;
-                }
-    
-                    .me-img {
-                    width:50%;
-                    margin-left:25%;
-                    margin-top: 3vw;
-                }
-    
-                    nav a {
-                    padding-top:3vw;
-                    padding-bottom: 3vw;
-    
-                    
-                }
-    
-                    .bottomText {
-                    margin-left:3vw;
-                    color:darkgrey;
-                    font-size: 8pt;
-                    }
-    
-                    .bottomText a {
-                    font-size: 8pt;
-                    }
-            }
-    
-        </style>
-    
-    </head>
-    <div id="blurZone">
-    <body>
-        <nav>
-            <a href="https://jacobwestra.com" class="JW">Jacob Westra</a>
-            <a href="https://calvinchimes.org/staff_name/jacob-westra/">Articles</a>
-            <a href="resume">Resume</a>
-            <a href="contact">Contact</a>
-        </nav>
-    
-        <div class="container" id="about">
-            <img src=me.png class="me-img">
-            <h2>About Me</h2>
-            <p>
-                Hey! I’m Jacob Westra, a senior studying computer science at <a href="https://Calvin.edu">Calvin University</a> in Grand Rapids, Michigan.
-            </p>
-            <p>
-                I have a passion for ethics in computer science, and love giving an easy-to-understand perspective for all things STEM, which is why I’m a reporter for Calvin’s student newspaper, <a href="https://calvinchimes.org">the Chimes</a>, covering <a href="https://calvinchimes.org/staff_name/jacob-westra/">science & technology</a>.
-            </p>
-            <p>
-                I’m also currently working on a project to monitor well-water usage in remote villages in Ecuador, through <a href="https://www.lifegivingwaterinternational.org/">Life Giving Water International</a>.
-            </p>
-            <p>
-                Additionally, I was an overnight camp counselor at <a href="https://camproger.org">Camp Roger</a> this past summer. It felt great giving back to the community I love, and fostering genuine connections between kids and nature.
-            
-            </p><p> 
-                I’m also currently looking for a job after graduation! If you’re a local company with a care for sustainability and helping the local community, I’d love to get in contact! My <a href="resume">resume</a> and <a href="contact">contact info</a> may be of help.
-            </p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob Westra</title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<style>
+    @font-face {
+        font-family: 'Frygia' !important;
+        src: url('Frygia-Regular.ttf') format('truetype'),
+             url('Frygia-Regular.woff') format('woff'),
+             url('Frygia-Regular.woff2') format('woff2');
+    }
+
+  body {
+    height: 1200pt;
+    width: 100vw;
+    margin: 0;
+    background: #FFFAEF;
+    background-image:
+    radial-gradient(at -0% 96.4%, #fffefd 0px, transparent 50%),
+    radial-gradient(at -50% 0%, #fffefd 0px, transparent 50%),
+    radial-gradient(at 97.1% 5.1%, #efe7de 0px, transparent 50%);
+  }
+
+  #title {
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Frygia-Bold', sans-serif !important;
+    font-size: 61pt;
+    color:#1c1c1c;
+    margin-bottom: 20pt;
+    font-weight: 700;
+  }
+
+  #mainText {
+    margin-left: 10%;
+    margin-right: 55%;
+    margin-top: 15vh;
+    font-size: 12pt;
+    font-family: 'Frygia-Regular', Arial;
+    color: #1c1c1c;
+  }
+
+  .ht {
+    background-color: rgb(203, 186, 203);
+    padding-bottom: 2px;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 4px;
+
+  }
+
+  .parag {
+    opacity: 0%;
+    margin-top: 35pt;
+    animation: paragFadeIn forwards;
+    animation-delay: 0.5s;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes paragFadeIn {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  a {
+	text-decoration: none;
+	color: #18272F;
+	font-weight: 700;
+  position: relative;
+  white-space: nowrap;
+}
+
+@keyframes linkAppear {
+  from {
+    width: 0%;
+    left: 50%;
+    background-color: transparent;
+  }
+
+  to {
+    width: 100%;
+    left: 0;
+    background-color: rgb(168, 199, 214);
+  }
+}
+
+a::before {
+  content: '';
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 2px;
+  height: 6px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+  animation: linkAppear forwards;
+  animation-duration: 0.6s;
+  animation-delay: 1.2s;
+}
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
+  padding: 2px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+#textInput {
+  font-family: monospace;
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #1c1c1c;
+	background-color:#ffe7e7;
+	padding: .4em;
+	color: rgb(58, 52, 52);
+}
+
+.spacer {
+  padding-right: 40pt;
+}
+
+.links {
+  margin-top: 70pt;
+  margin-bottom: 50pt;
+}
+
+.subtitle {
+  font-weight: 700;
+}
+
+.links a::before {
+  background-color: rgb(116, 205, 166);
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 2px;
+  height: 6px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+  animation: ease-in 2s;
+  animation-delay: 6s;
+}
+
+.links a:hover::before {
+  bottom: 0;
+  height: 100%;
+  padding: 2px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="mainText">
+        <div id="title"></div>
+        I'm Jacob Westra. I'm a <span class="ht">web developer</span> from <s>Holland</s> Grand Rapids, MI.
+        <div class="parag">
+          I'm currently studying computer science at Calvin University.
+          I have a passion for ethics in computer science, and love giving an easy-to-understand perspective for all things STEM, which is why I’m a reporter for Calvin’s student newspaper, <a href="https://calvinchimes.org">the Chimes</a>, covering <a href="https://calvinchimes.org/staff_name/jacob-westra/">science & technology</a>. I’m also the resident web developer for their website, calvinchimes.org.
         </div>
-    
-        <div class="container">
-            <h2>Work I've done</h2>
-            <p>
-                Along with my current experiences, I've done some other interesting things in the past.
-            </p> <p>
-                My sophomore and junior years at Calvin, I helped lead the student organization <a href="https://abs.calvin.edu">Abstraction</a>. Abstraction is Calvin's computer science club with, with around 50 members. I helped organize and lead events, design posters, and manage costs.
-            </p> <p>
-                I've also volunteered for several organizations, such as <a href="https://asphome.org/">Appalachia Service Project</a>, <a href="https://compheart.org/">Compassionate Heart Ministries</a>, <a href="https://www.feedwm.org/">Feeding America West Michigan</a>, and <a href="https://www.firstinspires.org/robotics/frc">FIRST Robotics Competition</a>.
-            </p> <p>
-                I've also worked as a student intern at <a href="https://yanfeng.com">Yanfeng Automotive Interiors</a>. It was my first "office job", and I dealt with pricing for Chrysler-Fiat/Stellantis. I had worked on the factory floor in summers prior, and it was interesting seeing my work from another perspective.
-            </div>
-    
-            <div class="container">
-                <h2>Projects</h2>
-                <p>
-                    As mentioned above, I'm currently working on an app to monitor water usage with LGWI's projects in Ecuador. This app will be available in both English and Spanish, and display monthly costs for each household as well. The planned delivery date is in April of 2024.
-                </p> 
-                <img src="MockUI.jpg" onclick="expandImage('MockUI.jpg')">
-                <p>
-                    I've made several programs with small footprints, aimed at being run on embedded devices. <a href="T3">T3</a> is the smallest game of tic-tac-toe I know of, and <a href="MicroHash">MicroHash</a> aims to bring a secure hash algorithm down to an embedded level. I've also made an <a href="CoffeeMonitor">IoT Coffee Maker Monitor</a> that runs on a Raspberry Pi.
-                </p><p>
-                    I have (a lot) of projects that are still in the works, chief among them being an open-world, entirely client-side multiplayer strategy game. The terrain generation algorithm is mostly done, and can be found <a href="https://jacobwestra.com/TerrainGenerator/">here</a> (intended for mobile use only).
-                </p>
-                  </div>
-        
-        <div class="container">
-            <h2>Contact</h2>
-            <p>You can reach me at me@jacobwestra.com. For anything Calvin/Chimes-related, contact me at jbw23@calvin.edu. Here are the links to my <a href="https://github.com/jbwx">Github</a> and <a href="https://linkedin.com/in/jbwx"> LinkedIn</a>. My more sensitive contact information can be found on my <a href="contact">contact</a> page. Use the same password for my resume.
-            </p>
+        <div class="parag" style="animation-delay: 1.8s;">
+          I’m also currently working on a <a href="LGWI/"> project </a> to monitor well-water usage in remote villages in Ecuador, through <a href="https://www.lifegivingwaterinternational.org/">Life Giving Water International</a>.
         </div>
-    
-        <span class="bottomNav">
-            <span class="bottomText">Site built and maintained by Jacob Westra • <a href="https://github.com/jbwx">Github</a> • <a href="https://linkedin.com/in/jbwx"> LinkedIn</a> </span>
-        </span>
-    
+        <div class="parag" style="animation-delay: 2.1s;">
+          Starting in March, I’ll be working on an interactive molecular biology article with Massachusetts-based startup <a href="https://www.dynotx.com/">Dyno Therapeutics</a>, through the <a href="https://www.openavenuesfoundation.org/">Open Avenues Foundation</a>.
+        </div>
+        <div class="parag" style="animation-delay: 2.4s;">
+          Additionally, I was an overnight camp counselor at <a href="https://camproger.org">Camp Roger</a> this past summer. It felt great giving back to the community I love, and fostering genuine connections between kids and nature.
+        </div>
+        <div class="parag" style="animation-delay: 2.7s;">
+          I’m also currently looking for a job after graduation! If you’re a local company with a care for sustainability and helping the local community, I’d love to get in contact! My <a href="#contact">resume and contact info</a> may be of help.
+        </div>
+
+        <!-- work I've done -->
+
+        <div class="parag" style="animation-delay: 3.3s;">
+          My sophomore and junior years at Calvin, I helped lead the student organization <a href="https://abs.calvin.edu">Abstraction</a>. Abstraction is Calvin's computer science club, with around 50 members. I helped organize and lead events, design posters, and manage costs.
+        </div>
+        <div class="parag" style="animation-delay: 3.6s;">
+          I've also volunteered for several organizations, such as <a href="https://asphome.org/">Appalachia Service Project</a>, <a href="https://compheart.org/">Compassionate Heart Ministries</a>, <a href="https://www.feedwm.org/">Feeding America West Michigan</a>, and <a href="https://www.firstinspires.org/robotics/frc">FIRST Robotics Competition</a>.
+        </div>
+        <div class="parag" style="animation-delay: 3.9s;">
+          I've also worked as a student intern at <a href="https://yanfeng.com">Yanfeng Automotive Interiors</a>. It was my first "office job", and I dealt with pricing for Chrysler-Fiat/Stellantis. I had worked on the factory floor in summers prior, and it was interesting seeing my work from another perspective.
+        </div>
+
+        <!-- Contact & resume -->
+
+        <span id="contact"></span>
+
+        <div class="parag" style="animation-delay: 4.2s;">
+          If you can recall the password from the business card or resume I gave you, <input type="text" id="textInput" placeholder="type it here." oninput="submit()">
+        </div>
+
+        <div class="parag" style="animation-delay: 4.5s;">
+          You can reach me at me@jacobwestra.com. For anything Calvin/Chimes-related, contact me at jbw23@calvin.edu. My more sensitive contact information can be found on my business card or resume.
+        </div>
+
+          <div class="links">
+            <a href="https://www.linkedin.com/in/jbwx/">LinkedIn</a><span class="spacer"></span><a href="https://github.com/jbwx">Github</a> <span class="spacer"></span><a href="https://www.kaggle.com/westrajacob">Kaggle</a> <span class="spacer"></span><a href="https://mastodon.social/">Mastodon</a>
+          </div>
+
     </div>
-    <div class=expandedImage id=imgplaceholder></div>
-    
-    
-    <script>
-        function expandImage(image) {
-            document.getElementById("blurZone").style.filter = "blur(10px)";
-            document.getElementById("imgplaceholder").innerHTML = `
-                <div class=expandedImage>
-                <img src="MockUI.jpg" onclick='contractImage()'>
-                </div>
-            `;
-        }
-    
-        function contractImage(){
-            document.getElementById("blurZone").style.filter = "blur(0px)";
-            document.getElementById("imgplaceholder").innerHTML = "";
-        }
-    </script>
+</body>
 
 
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script>
+// script file for cool typewriter thing
+const text = [
+    "Heyo!",
+    "What's up?",
+    "Hi!",
+    "Hello!",
+    "Bonjour!",
+    "Hey!",
+    "Yo!",
+    "Howdy!",
+    "Greetings!",
+    "Hola!",
+    "Sup?",
+    "Hey there!",
+    "Ciao!",
+    "Namaste!",
+    "Buenos dias!",
+    "Hey hey!",
+    "Good day!",
+    "Salutations!",
+    "Hiya!",
+    "Aloha!"
+];
+
+const cursor = "\u258C"; // Unicode left half block
+
+let wordIndex = 0;
+let index = 0;
+
+function typeWriter() {
+  document.getElementById("title").textContent = text[wordIndex].substring(0, index) + cursor;
+  index++;
+  if (index <= text[wordIndex].length) {
+    setTimeout(typeWriter, 75); // Random delay for a more natural typing effect
+  } else if (wordIndex != text.length-1) {
+        setTimeout(untypeWriter, 2000); // Wait for 1 second then start untyping
+  } if (wordIndex == text.length-1){
+    wordIndex = 0;
+    untypeWriter;
+  }
+}
+
+function untypeWriter() {
+  if (index >= 0) {
+    index--;
+    document.getElementById("title").textContent = text[wordIndex].substring(0, index) + cursor;
+    setTimeout(untypeWriter, 85); // Random delay for a more natural untyping effect
+  } else {
+    wordIndex++;
+    typeWriter();
+  }
+}
+
+typeWriter();
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <script>  
 const firebaseConfig = {
@@ -255,13 +298,13 @@ const firebaseConfig = {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <script>
-
+// script for firebase API stuff
       let xip = "";
       $.getJSON("https://api.ipify.org/?format=json", function(e) {
           xip = e.ip;
         writeEntry(e.ip);
 });
-    // log your ip address :3
+    // log your ip address, tehehe :3
     function writeEntry(ip) {
       const newEntry = {
             IPaddr: ip,
@@ -300,5 +343,50 @@ const firebaseConfig = {
 }
 
   </script>
-</body>
+
+<script>
+  // script for inputting contact/resume password
+  function submit(){
+      let input = document.getElementById("textInput").value;
+      console.log(input);
+
+      if(hash(input) == 9512960186359){
+          window.open("resume/" + input + ".pdf");
+      }
+  }
+
+  function hash(input){
+      input += "WwAZZqi3" + input + "jhq3I7u" + input; // two random strings
+      let sum = input.charCodeAt(0); // sum starts at beginning of input
+      let accumulator = ""; // final output string that gets converted to an int
+      let output = [ // 15 9-digit primes, serve as mask
+                      680646451, 
+                      765809491,
+                      390493679,
+                      544627277,
+                      856868113,
+                      704909377,
+                      572600191,
+                      821097707,
+                      230376011,
+                      184848203,
+                      473243581,
+                      687924253,
+                      446183149,
+                      856675481,
+                      557158177
+                   ];
+      for(let i = 0; i < input.length; i++){ // accumulate sum
+          sum += Math.pow(input.charCodeAt(i), 17) * i;
+      }
+      for(let i = 0; i < input.length; i++){ // mash sum with each input digit
+          output[i % 15] = (output[i % 15] ^ Math.abs(sum ^ input.charCodeAt(i))) % 10;
+      }
+      for(let i = 0; i < 15; i++){ // concatonate into string
+          accumulator += output[i];
+      }
+      return parseInt(accumulator); // return a parsed version of that string
+  }
+</script>
+
 </html>

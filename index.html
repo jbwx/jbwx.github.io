@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jacob Westra</title>
-<link rel="icon" type="image/x-icon" href="favicon.png">
-<style>
-    @font-face {
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jacob Westra</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png" />
+        <style>
+            /* @font-face {
       font-family: 'Frygia-Bold';
       src: url('https://en.bestfonts.pro/fonts_files/632379114bf8d619a17301ee/files/Frygia-Bold.ttf'),
            url('https://en.bestfonts.pro/fonts_files/632379114bf8d619a17301ee/files/Frygia-Bold.woff'),
@@ -18,404 +18,490 @@
       src: url('https://en.bestfonts.pro/fonts_files/632379114bf8d619a17301ee/files/Frygia-Regular.ttf'),
            url('https://en.bestfonts.pro/fonts_files/632379114bf8d619a17301ee/files/Frygia-Regular.woff'),
            url('https://en.bestfonts.pro/fonts_files/632379114bf8d619a17301ee/files/Frygia-Regular.woff2');
-    }
+    } */
 
-  body {
-    height: 1200pt;
-    width: 100vw;
-    margin: 0;
-    background: #FFFAEF;
-    background-image:
-    radial-gradient(at -0% 96.4%, #fffefd 0px, transparent 50%),
-    radial-gradient(at -50% 0%, #fffefd 0px, transparent 50%),
-    radial-gradient(at 97.1% 5.1%, #efe7de 0px, transparent 50%);
-  }
+            body {
+                height: 1200pt;
+                width: 100vw;
+                margin: 0;
+                background: #fffaef;
+                background-image: radial-gradient(
+                        at -0% 96.4%,
+                        #fffefd 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(at -50% 0%, #fffefd 0px, transparent 50%),
+                    radial-gradient(at 97.1% 5.1%, #efe7de 0px, transparent 50%);
+            }
 
-  #title {
-    white-space: nowrap;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Frygia-bold', sans-serif !important;
-    font-size: 61pt;
-    color:#1c1c1c;
-    margin-bottom: 20pt;
-    font-weight: 700;
-  }
+            #title {
+                white-space: nowrap;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-family: "Frygia-bold", sans-serif !important;
+                font-size: 61pt;
+                color: #1c1c1c;
+                margin-bottom: 20pt;
+                font-weight: 700;
+            }
 
-  #mainText {
-    margin-left: 10%;
-    margin-right: 55%;
-    margin-top: 15vh;
-    font-size: 12pt;
-    font-family: 'Frygia', Arial;
-    color: #1c1c1c;
-  }
+            #mainText {
+                margin-left: 10%;
+                margin-right: 55%;
+                margin-top: 15vh;
+                font-size: 12pt;
+                font-family: "Frygia", Arial;
+                color: #1c1c1c;
+            }
 
-  .ht {
-    background-color: rgb(203, 186, 203);
-    padding-bottom: 2px;
-    padding-top: 3px;
-    padding-left: 5px;
-    padding-right: 4px;
+            .ht {
+                background-color: rgb(203, 186, 203);
+                padding-bottom: 2px;
+                padding-top: 3px;
+                padding-left: 5px;
+                padding-right: 4px;
+            }
 
-  }
+            .parag {
+                opacity: 0%;
+                margin-top: 35pt;
+                animation: paragFadeIn forwards;
+                animation-delay: 0.5s;
+                animation-duration: 0.7s;
+                animation-timing-function: ease-in;
+            }
 
-  .parag {
-    opacity: 0%;
-    margin-top: 35pt;
-    animation: paragFadeIn forwards;
-    animation-delay: 0.5s;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-in;
-  }
+            @keyframes paragFadeIn {
+                from {
+                    opacity: 0%;
+                }
+                to {
+                    opacity: 100%;
+                }
+            }
 
-  @keyframes paragFadeIn {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
+            a {
+                text-decoration: none;
+                color: #18272f;
+                font-family: "Frygia-bold", Arial;
+                font-weight: bold;
+                position: relative;
+                white-space: nowrap;
+            }
 
-  a {
-	text-decoration: none;
-	color: #18272F;
-  font-family: 'Frygia-bold', Arial;
-  font-weight: bold;
-  position: relative;
-  white-space: nowrap;
-}
+            @keyframes linkAppear {
+                from {
+                    width: 0%;
+                    left: 50%;
+                    background-color: transparent;
+                }
 
-@keyframes linkAppear {
-  from {
-    width: 0%;
-    left: 50%;
-    background-color: transparent;
-  }
+                to {
+                    width: 100%;
+                    left: 0;
+                    background-color: rgb(168, 199, 214);
+                }
+            }
 
-  to {
-    width: 100%;
-    left: 0;
-    background-color: rgb(168, 199, 214);
-  }
-}
+            a::before {
+                content: "";
+                background-color: transparent;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 2px;
+                height: 6px;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+                animation: linkAppear forwards;
+                animation-duration: 0.6s;
+                animation-delay: 1.2s;
+            }
 
-a::before {
-  content: '';
-  background-color: transparent;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 2px;
-  height: 6px;
-  z-index: -1;
-  transition: all .3s ease-in-out;
-  animation: linkAppear forwards;
-  animation-duration: 0.6s;
-  animation-delay: 1.2s;
-}
+            a:hover::before {
+                bottom: 0;
+                height: 100%;
+                padding: 2px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
 
-a:hover::before {
-  bottom: 0;
-  height: 100%;
-  padding: 2px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-}
+            #textInput {
+                font-family: monospace;
+                appearance: none;
+                border: none;
+                outline: none;
+                border-bottom: 0.2em solid #1c1c1c;
+                background-color: #ffe7e7;
+                padding: 0.4em;
+                color: rgb(58, 52, 52);
+            }
 
-#textInput {
-  font-family: monospace;
-	appearance: none;
-	border: none;
-	outline: none;
-	border-bottom: .2em solid #1c1c1c;
-	background-color:#ffe7e7;
-	padding: .4em;
-	color: rgb(58, 52, 52);
-}
+            .spacer {
+                padding-right: 40pt;
+            }
 
-.spacer {
-  padding-right: 40pt;
-}
+            .links {
+                margin-top: 70pt;
+                margin-bottom: 50pt;
+            }
 
-.links {
-  margin-top: 70pt;
-  margin-bottom: 50pt;
-}
+            .links a::before {
+                background-color: rgb(116, 205, 166);
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 2px;
+                height: 6px;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+                animation: ease-in 2s;
+                animation-delay: 6s;
+            }
 
-.links a::before {
-  background-color: rgb(116, 205, 166);
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 2px;
-  height: 6px;
-  z-index: -1;
-  transition: all .3s ease-in-out;
-  animation: ease-in 2s;
-  animation-delay: 6s;
-}
+            .links a:hover::before {
+                bottom: 0;
+                height: 100%;
+                padding: 2px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
 
-.links a:hover::before {
-  bottom: 0;
-  height: 100%;
-  padding: 2px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-}
+            @media only screen and (max-width: 1200px) {
+                #mainText {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    margin-top: 50pt;
+                }
 
-@media only screen and (max-width: 1200px) {
-  #mainText {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 50pt;
-  }
-  
-  #title {
-    font-size: 40pt;
-  }
+                #title {
+                    font-size: 40pt;
+                }
 
-  .spacer {
-    padding-right: 20pt;
-  }
+                .spacer {
+                    padding-right: 20pt;
+                }
 
-  #textInput {
-    border-radius: 0;
-    white-space:nowrap;
-  }
+                #textInput {
+                    border-radius: 0;
+                    white-space: nowrap;
+                }
 
-  body {
-    height: 1500pt;
-  }
-  
-}
+                body {
+                    height: 1500pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainText">
+            <div id="title"></div>
+            I'm Jacob Westra. I'm a
+            <span class="ht">software developer</span> from <s>Holland</s> Grand
+            Rapids, MI.
+            <div class="parag">
+                I'm currently doing software development for
+                <a href="https://thekairosmedia.com/"> Kairos Media</a>, a small
+                videography & marketing company in Grand Rapids.
+            </div>
+            <div class="parag">
+                I'm a recent graduate of Calvin University, where I studied
+                computer science. There, I was the
+                <a href="https://calvinchimes.org/staff_name/jacob-westra/"
+                    >science & technology</a
+                >
+                reporter for Calvin University's student newspaper,
+                <a href="https://calvinchimes.org">the Chimes</a>. I was also
+                the resident web developer for their website, calvinchimes.org.
+            </div>
+            <div class="parag" style="animation-delay: 1.8s">
+                My <a href="LGWI/">senior project</a> at Calvin involved
+                building an app for a Christian NGO,
+                <a href="https://www.lifegivingwaterinternational.org/"
+                    >Life Giving Water International</a
+                >, to monitor well-water usage in remote villages in Ecuador.
+            </div>
+            <div class="parag" style="animation-delay: 2.1s">
+                My senior year at Calvin, I also worked on an
+                <a href="/venus/"> interactive molecular biology article </a>
+                with Massachusetts-based startup
+                <a href="https://www.dynotx.com/">Dyno Therapeutics</a>, through
+                the
+                <a href="https://www.openavenuesfoundation.org/"
+                    >Open Avenues Foundation</a
+                >.
+            </div>
+            <div class="parag" style="animation-delay: 2.4s">
+                Additionally, I was an overnight camp counselor at
+                <a href="https://camproger.org">Camp Roger</a> this past summer.
+                It felt great giving back to the community I love, and fostering
+                genuine connections between kids and nature.
+            </div>
 
+            <!-- work I've done -->
 
-</style>
-</head>
-<body>
-    <div id="mainText">
-        <div id="title"></div>
-        I'm Jacob Westra. I'm a <span class="ht">software developer</span> from <s>Holland</s> Grand Rapids, MI.
-        <div class="parag">
-          I'm currently doing software development for <a href="https://thekairosmedia.com/"> Kairos Media</a>, a small videography & marketing company in Grand Rapids.
+            <div class="parag" style="animation-delay: 2.7s">
+                My sophomore and junior years at Calvin, I helped lead the
+                student organization
+                <a href="https://abs.calvin.edu">Abstraction</a>. Abstraction is
+                Calvin's computer science club, with around 50 members. I helped
+                organize and lead events, design posters, and manage costs.
+            </div>
+            <div class="parag" style="animation-delay: 3s">
+                I've also volunteered for several organizations, such as
+                <a href="https://asphome.org/">Appalachia Service Project</a>,
+                <a href="https://compheart.org/"
+                    >Compassionate Heart Ministries</a
+                >,
+                <a href="https://www.feedwm.org/"
+                    >Feeding America West Michigan</a
+                >, and
+                <a href="https://www.firstinspires.org/robotics/frc"
+                    >FIRST Robotics Competition</a
+                >.
+            </div>
+            <div class="parag" style="animation-delay: 3.3s">
+                I've also worked as a student intern at
+                <a href="https://yanfeng.com">Yanfeng Automotive Interiors</a>.
+                It was my first "office job", and I dealt with pricing for
+                Chrysler-Fiat/Stellantis. I had worked on the factory floor in
+                summers prior, and it was interesting seeing my work from
+                another perspective.
+            </div>
+
+            <!-- Contact & resume -->
+
+            <span id="contact"></span>
+
+            <div class="parag" style="animation-delay: 3.6s">
+                If you can recall the password from the business card or resume
+                I gave you,
+                <input
+                    type="text"
+                    id="textInput"
+                    placeholder="type it here."
+                    oninput="submit()"
+                />
+            </div>
+
+            <div class="parag" style="animation-delay: 3.9s">
+                You can reach me at me@jacobwestra.com. For anything
+                Calvin/Chimes-related, contact me at jbw23@calvin.edu. My more
+                sensitive contact information can be found on my business card
+                or resume.
+            </div>
+
+            <div class="links">
+                <a href="https://www.linkedin.com/in/jbwx/">LinkedIn</a
+                ><span class="spacer"></span
+                ><a href="https://github.com/jbwx">Github</a>
+                <span class="spacer"></span
+                ><a href="https://www.kaggle.com/westrajacob">Kaggle</a>
+                <span class="spacer"></span
+                ><a rel="me" href="https://mastodon.social/@jbwx">Mastodon</a>
+            </div>
         </div>
-        <div class="parag">
-          I'm a recent graduate of Calvin University, where I studied computer science. There, I was the <a href="https://calvinchimes.org/staff_name/jacob-westra/">science & technology</a> reporter for Calvin University's student newspaper, <a href="https://calvinchimes.org">the Chimes</a>. I was also the resident web developer for their website, calvinchimes.org.
-        </div>
-        <div class="parag" style="animation-delay: 1.8s;">
-          My <a href="LGWI/">senior project</a> at Calvin involved building an app for a Christian NGO, <a href="https://www.lifegivingwaterinternational.org/">Life Giving Water International</a>, to monitor well-water usage in remote villages in Ecuador.
-        </div>
-        <div class="parag" style="animation-delay: 2.1s;">
-          My senior year at Calvin, I also worked on an <a href="/venus/"> interactive molecular biology article </a> with Massachusetts-based startup <a href="https://www.dynotx.com/">Dyno Therapeutics</a>, through the <a href="https://www.openavenuesfoundation.org/">Open Avenues Foundation</a>.
-        </div>
-        <div class="parag" style="animation-delay: 2.4s;">
-          Additionally, I was an overnight camp counselor at <a href="https://camproger.org">Camp Roger</a> this past summer. It felt great giving back to the community I love, and fostering genuine connections between kids and nature.
-        </div>
+    </body>
 
-        <!-- work I've done -->
+    <script>
+        // script file for cool typewriter thing
+        const text = [
+            "Heyo!",
+            "What's up?",
+            "Hi!",
+            "Hello!",
+            "Bonjour!",
+            "Hey!",
+            "Yo!",
+            "Howdy!",
+            "Greetings!",
+            "Hola!",
+            "Sup?",
+            "Hey there!",
+            "Ciao!",
+            "Namaste!",
+            "Buenos dias!",
+            "Hey hey!",
+            "Good day!",
+            "Salutations!",
+            "Hiya!",
+            "Aloha!",
+        ];
 
-        <div class="parag" style="animation-delay: 2.7s;">
-          My sophomore and junior years at Calvin, I helped lead the student organization <a href="https://abs.calvin.edu">Abstraction</a>. Abstraction is Calvin's computer science club, with around 50 members. I helped organize and lead events, design posters, and manage costs.
-        </div>
-        <div class="parag" style="animation-delay: 3.0s;">
-          I've also volunteered for several organizations, such as <a href="https://asphome.org/">Appalachia Service Project</a>, <a href="https://compheart.org/">Compassionate Heart Ministries</a>, <a href="https://www.feedwm.org/">Feeding America West Michigan</a>, and <a href="https://www.firstinspires.org/robotics/frc">FIRST Robotics Competition</a>.
-        </div>
-        <div class="parag" style="animation-delay: 3.3s;">
-          I've also worked as a student intern at <a href="https://yanfeng.com">Yanfeng Automotive Interiors</a>. It was my first "office job", and I dealt with pricing for Chrysler-Fiat/Stellantis. I had worked on the factory floor in summers prior, and it was interesting seeing my work from another perspective.
-        </div>
+        const cursor = "\u258C"; // Unicode left half block
 
-        <!-- Contact & resume -->
+        let wordIndex = 0;
+        let index = 0;
 
-        <span id="contact"></span>
-
-        <div class="parag" style="animation-delay: 3.6s;">
-          If you can recall the password from the business card or resume I gave you, <input type="text" id="textInput" placeholder="type it here." oninput="submit()">
-        </div>
-
-        <div class="parag" style="animation-delay: 3.9s;">
-          You can reach me at me@jacobwestra.com. For anything Calvin/Chimes-related, contact me at jbw23@calvin.edu. My more sensitive contact information can be found on my business card or resume.
-        </div>
-
-          <div class="links">
-            <a href="https://www.linkedin.com/in/jbwx/">LinkedIn</a><span class="spacer"></span><a href="https://github.com/jbwx">Github</a> <span class="spacer"></span><a href="https://www.kaggle.com/westrajacob">Kaggle</a> <span class="spacer"></span><a rel="me" href="https://mastodon.social/@jbwx">Mastodon</a>
-          </div>
-
-    </div>
-</body>
-
-
-<script>
-// script file for cool typewriter thing
-const text = [
-    "Heyo!",
-    "What's up?",
-    "Hi!",
-    "Hello!",
-    "Bonjour!",
-    "Hey!",
-    "Yo!",
-    "Howdy!",
-    "Greetings!",
-    "Hola!",
-    "Sup?",
-    "Hey there!",
-    "Ciao!",
-    "Namaste!",
-    "Buenos dias!",
-    "Hey hey!",
-    "Good day!",
-    "Salutations!",
-    "Hiya!",
-    "Aloha!"
-];
-
-const cursor = "\u258C"; // Unicode left half block
-
-let wordIndex = 0;
-let index = 0;
-
-function typeWriter() {
-  document.getElementById("title").textContent = text[wordIndex].substring(0, index) + cursor;
-  index++;
-  if (index <= text[wordIndex].length) {
-    setTimeout(typeWriter, 75); // Random delay for a more natural typing effect
-  } else if (wordIndex != text.length-1) {
-        setTimeout(untypeWriter, 2000); // Wait for 1 second then start untyping
-  } if (wordIndex == text.length-1){
-    wordIndex = 0;
-    untypeWriter;
-  }
-}
-
-function untypeWriter() {
-  if (index >= 0) {
-    index--;
-    document.getElementById("title").textContent = text[wordIndex].substring(0, index) + cursor;
-    setTimeout(untypeWriter, 85); // Random delay for a more natural untyping effect
-  } else {
-    wordIndex++;
-    typeWriter();
-  }
-}
-
-typeWriter();
-
-</script>
-
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script>  
-const firebaseConfig = {
-    apiKey: "AIzaSyCaSavy7-SaJXk_e8zfzKj_oU9Cnofsyuw",
-        authDomain: "xr-tag.firebaseapp.com",
-        projectId: "xr-tag",
-        storageBucket: "xr-tag.appspot.com",
-        messagingSenderId: "647326155458",
-        appId: "1:647326155458:web:f1f7ec62eb899338d5f15b",
-        measurementId: "G-H9JGG5HYMB"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-
-    // Get a reference to the Firestore database
-    const firestore = firebase.firestore();
-  </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-  <script>
-// script for firebase API stuff
-      let xip = "";
-      $.getJSON("https://api.ipify.org/?format=json", function(e) {
-          xip = e.ip;
-        writeEntry(e.ip);
-});
-    // log your ip address, tehehe :3
-    function writeEntry(ip) {
-      const newEntry = {
-            IPaddr: ip,
-            Ref: document.referrer,
-            Timestamp: getTD()
-      };
-
-      // Add the entry to the database
-      firestore.collection("PortfolioTrack").doc(xip + ": " + getTD()).set(newEntry);
-    }
-
-    // i got this from somewhere on stackoverflow. Source: i forgor
-    // slightly modified by me
-    function getTD() {
-    var now = new Date(), // current date
-        months = ['January', 'February', '...']; // you get the idea
-        m = "am";
-        hrs = now.getHours();
-        if (now.getHours() > 12){
-            m = "pm";
-            hrs = hrs % 12;
+        function typeWriter() {
+            document.getElementById("title").textContent =
+                text[wordIndex].substring(0, index) + cursor;
+            index++;
+            if (index <= text[wordIndex].length) {
+                setTimeout(typeWriter, 75); // Random delay for a more natural typing effect
+            } else if (wordIndex != text.length - 1) {
+                setTimeout(untypeWriter, 2000); // Wait for 1 second then start untyping
+            }
+            if (wordIndex == text.length - 1) {
+                wordIndex = 0;
+                untypeWriter;
+            }
         }
-        time = hrs + ':' + now.getMinutes() + " " + m // again, you get the idea
 
-        // a cleaner way than string concatenation
-        date = [now.getDate(), 
+        function untypeWriter() {
+            if (index >= 0) {
+                index--;
+                document.getElementById("title").textContent =
+                    text[wordIndex].substring(0, index) + cursor;
+                setTimeout(untypeWriter, 85); // Random delay for a more natural untyping effect
+            } else {
+                wordIndex++;
+                typeWriter();
+            }
+        }
+
+        typeWriter();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCaSavy7-SaJXk_e8zfzKj_oU9Cnofsyuw",
+            authDomain: "xr-tag.firebaseapp.com",
+            projectId: "xr-tag",
+            storageBucket: "xr-tag.appspot.com",
+            messagingSenderId: "647326155458",
+            appId: "1:647326155458:web:f1f7ec62eb899338d5f15b",
+            measurementId: "G-H9JGG5HYMB",
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the Firestore database
+        const firestore = firebase.firestore();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        // script for firebase API stuff
+        let xip = "";
+        $.getJSON("https://api.ipify.org/?format=json", function (e) {
+            xip = e.ip;
+            writeEntry(e.ip);
+        });
+        // log your ip address, tehehe :3
+        function writeEntry(ip) {
+            const newEntry = {
+                IPaddr: ip,
+                Ref: document.referrer,
+                Timestamp: getTD(),
+            };
+
+            // Add the entry to the database
+            firestore
+                .collection("PortfolioTrack")
+                .doc(xip + ": " + getTD())
+                .set(newEntry);
+        }
+
+        // i got this from somewhere on stackoverflow. Source: i forgor
+        // slightly modified by me
+        function getTD() {
+            var now = new Date(), // current date
+                months = ["January", "February", "..."]; // you get the idea
+            m = "am";
+            hrs = now.getHours();
+            if (now.getHours() > 12) {
+                m = "pm";
+                hrs = hrs % 12;
+            }
+            time = hrs + ":" + now.getMinutes() + " " + m; // again, you get the idea
+
+            // a cleaner way than string concatenation
+            date = [
+                now.getDate(),
                 months[now.getMonth()],
-                now.getFullYear()].join(' ');
+                now.getFullYear(),
+            ].join(" ");
 
-                const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                const mons = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const weekday = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+            ];
+            const mons = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
 
-    // set the content of the element with the ID time to the formatted string
-    
-    return time + ", " + (weekday[now.getDay()] + ", " + mons[now.getMonth()] + " " + now.getUTCDate() + ", " + now.getFullYear());
-}
+            // set the content of the element with the ID time to the formatted string
 
-  </script>
+            return (
+                time +
+                ", " +
+                (weekday[now.getDay()] +
+                    ", " +
+                    mons[now.getMonth()] +
+                    " " +
+                    now.getUTCDate() +
+                    ", " +
+                    now.getFullYear())
+            );
+        }
+    </script>
 
-<script>
-  // script for inputting contact/resume password
-  function submit(){
-      let input = document.getElementById("textInput").value;
-      console.log(input);
+    <script>
+        // script for inputting contact/resume password
+        function submit() {
+            let input = document.getElementById("textInput").value;
+            console.log(input);
 
-      if(hash(input) == 9512960186359){
-          window.open("resume/" + input + ".pdf");
-      }
-  }
+            if (hash(input) == 9512960186359) {
+                window.open("resume/" + input + ".pdf");
+            }
+        }
 
-  function hash(input){
-      input += "WwAZZqi3" + input + "jhq3I7u" + input; // two random strings
-      let sum = input.charCodeAt(0); // sum starts at beginning of input
-      let accumulator = ""; // final output string that gets converted to an int
-      let output = [ // 15 9-digit primes, serve as mask
-                      680646451, 
-                      765809491,
-                      390493679,
-                      544627277,
-                      856868113,
-                      704909377,
-                      572600191,
-                      821097707,
-                      230376011,
-                      184848203,
-                      473243581,
-                      687924253,
-                      446183149,
-                      856675481,
-                      557158177
-                   ];
-      for(let i = 0; i < input.length; i++){ // accumulate sum
-          sum += Math.pow(input.charCodeAt(i), 17) * i;
-      }
-      for(let i = 0; i < input.length; i++){ // mash sum with each input digit
-          output[i % 15] = (output[i % 15] ^ Math.abs(sum ^ input.charCodeAt(i))) % 10;
-      }
-      for(let i = 0; i < 15; i++){ // concatonate into string
-          accumulator += output[i];
-      }
-      return parseInt(accumulator); // return a parsed version of that string
-  }
-</script>
-
+        function hash(input) {
+            input += "WwAZZqi3" + input + "jhq3I7u" + input; // two random strings
+            let sum = input.charCodeAt(0); // sum starts at beginning of input
+            let accumulator = ""; // final output string that gets converted to an int
+            let output = [
+                // 15 9-digit primes, serve as mask
+                680646451, 765809491, 390493679, 544627277, 856868113,
+                704909377, 572600191, 821097707, 230376011, 184848203,
+                473243581, 687924253, 446183149, 856675481, 557158177,
+            ];
+            for (let i = 0; i < input.length; i++) {
+                // accumulate sum
+                sum += Math.pow(input.charCodeAt(i), 17) * i;
+            }
+            for (let i = 0; i < input.length; i++) {
+                // mash sum with each input digit
+                output[i % 15] =
+                    (output[i % 15] ^ Math.abs(sum ^ input.charCodeAt(i))) % 10;
+            }
+            for (let i = 0; i < 15; i++) {
+                // concatonate into string
+                accumulator += output[i];
+            }
+            return parseInt(accumulator); // return a parsed version of that string
+        }
+    </script>
 </html>
